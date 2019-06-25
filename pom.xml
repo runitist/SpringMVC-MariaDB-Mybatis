@@ -146,6 +146,15 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- db 쿼리 로그를 위한 것. -->
+		<dependency>
+			<groupId>org.bgee.log4jdbc-log4j2</groupId>
+			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
+			<version>1.16</version>
+		</dependency>
+
+
 	</dependencies>
 	<build>
 		<plugins>
