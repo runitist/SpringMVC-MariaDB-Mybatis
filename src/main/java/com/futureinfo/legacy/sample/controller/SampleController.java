@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.futureinfo.legacy.sample.service.SampleService;
 
 @Controller
+@RequestMapping("/sample")
 public class SampleController {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	

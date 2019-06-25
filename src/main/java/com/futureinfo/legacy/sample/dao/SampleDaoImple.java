@@ -1,18 +1,16 @@
 package com.futureinfo.legacy.sample.dao;
 
-import java.util.List;
-
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
-
-import com.futureinfo.legacy.sample.dto.SampleDto;
 
 @Repository("sampleDao")
 public class SampleDaoImple implements SampleDao {
 
 	@Autowired
-	protected SqlSessionTemplate sqlSession;
+	@Qualifier("testMariaDBSqlSession")
+	protected SqlSessionTemplate sqlSession;//이 객체가 mapper xml파일의 sql을 읽어와 JDBC로 실행한다.
 	
 	@Override
 	public String selectSampleData() throws Exception {
